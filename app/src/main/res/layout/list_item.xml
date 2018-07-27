@@ -1,26 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:padding="16dp"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content"
+    android:background="@color/tan_background"
+    android:minHeight="@dimen/list_item_height">
+
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@mipmap/ic_launcher"
-        android:id="@+id/img"/>
+        android:layout_width="@dimen/list_item_height"
+        android:layout_height="@dimen/list_item_height"
+        android:id="@+id/img"
+        android:layout_alignParentLeft="true"/>
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="@dimen/list_item_height"
+        android:orientation="vertical"
+        android:paddingLeft="16dp"
+        android:id="@+id/word_text"
+        android:gravity="center_vertical"
+        android:background="@color/category_numbers"
+        android:layout_toRightOf="@id/img">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/miwokTextView"/>
+            android:id="@+id/miwokTextView"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textStyle="bold"
+            android:textColor="@android:color/white" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/defaultTextView"/>
+            android:id="@+id/defaultTextView"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="@android:color/white"/>
     </LinearLayout>
 
+    <ImageView
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginRight="16dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/baseline_play_arrow_white_24dp"/>
 
-</LinearLayout>
+
+</RelativeLayout>
